@@ -1,0 +1,12 @@
+[Unit]
+Description=DogStat Daily Tracker
+
+[Service]
+WorkingDirectory=/opt/dogstat
+ExecStart=/usr/bin/python hoover.py
+KillMode=process
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
+Alias=dogstat.service
